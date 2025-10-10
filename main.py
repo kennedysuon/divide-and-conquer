@@ -18,12 +18,8 @@ def binary_search(a, start, end):
     else:
         return binary_search(a, start, mid)
     
+'''
 
-'''
-Merge Sort based approach
-Input: A sorted array, A, wehre one unique value appears once and every other value appears twice OR MORE.
-Output: The single unique value.
-'''
 def merge_based(a, start, end):
     if start > end:
         return None
@@ -56,6 +52,8 @@ def merge_based(a, start, end):
     else:
         return merge_based(a, j+1, end)
 
+'''
+
 
 def main():
     if len(sys.argv) != 2:
@@ -66,8 +64,8 @@ def main():
     with open(path, "r") as f:
         a = [int(x) for x in f.read().split()]
 
-    print("Binary:", binary_search(a, 0, len(a) - 1))
-    print("Merge:", merge_based(a, 0, len(a)-1))
+    print(binary_search(a, 0, len(a) - 1))
+    # print("Merge:", merge_based(a, 0, len(a)-1))
 
 
 if __name__ == "__main__":
